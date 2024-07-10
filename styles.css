@@ -280,3 +280,74 @@ footer {
 footer p {
     margin: 0;
 }
+
+
+.animated {
+    animation-duration: 2s !important;
+    animation-fill-mode: both !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+.delay-1s {
+    animation-delay: 1s;
+}
+
+.delay-2s {
+    animation-delay: 1.5s;
+}
+
+.delay-3s {
+    animation-delay: 2s;
+}
+
+.delay-4s {
+    animation-delay: 2.5s;
+}
+
+.time-unit {
+    opacity: 0;
+}
+
+.time-unit.animate {
+    animation: appear 2s ease-out forwards;
+}
+
+@keyframes appear {
+    0% { opacity: 0; transform: scale(0); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.details {
+    opacity: 0;
+}
+
+.details.animate {
+    animation: fadeIn 3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.timeline-item {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.timeline-item.animate {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}

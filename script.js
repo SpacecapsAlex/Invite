@@ -58,4 +58,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     setInterval(updateCountdown, 1000);
+
+    let observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.time-unit').forEach(element => observer.observe(element));
+
+    observer.observe(document.querySelector('.details'));
+
+    let elements = document.querySelectorAll('.timeline-item');
+
+    elements.forEach(el => {
+        observer.observe(el);
+    })
 });
