@@ -155,7 +155,8 @@ body {
 
 .schedule {
     padding: 50px 20px;
-    background: url('flower-4.jpg') no-repeat center center;
+    background: url('background-timelinejpg.jpg') no-repeat center center;
+    background-size: cover;
     background-color: #fff;
 }
 
