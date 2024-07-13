@@ -47,10 +47,10 @@
     </section>
     <section class="rsvp">
         <h2>Подтвердите свое присутствие</h2>
-        <button>Подтвердить</button>
-        <p>Введите своёё имя и сообщение для жениха и невесты</p>
+        <button id="sendButton">Подтвердить</button>
+        <p>Введите своё имя и сообщение для жениха и невесты</p>
         <label>
-            <textarea rows="3"></textarea>
+            <textarea id="messageInput" placeholder="Введите сообщение здесь..." rows="3"></textarea>
         </label>
     </section>
     <section class="schedule">
@@ -112,5 +112,31 @@
     </footer>
 </div>
 <script src="script.js"></script>
+<script>
+    document.getElementById('sendButton').addEventListener('click', function() {
+        const token = '7310372487:AAHvza9mrsF8pOG29dYJ2bGBp1Gw_zlh3Js';
+        const chatId = '-1002186827295';
+        let message = document.getElementById('messageInput').value.trim();
+
+        if (message === '') {
+            message = 'Пустое сообщение';
+        }
+
+        const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message ?? '')}`;
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    alert('Сообщение отправлено!');
+                } else {
+                    alert('Ошибка отправки сообщения.');
+                }
+            })
+            .catch(error => {
+                alert('Ошибка: ' + error);
+            });
+    });
+</script>
 </body>
 </html>
