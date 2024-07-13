@@ -58,6 +58,8 @@ body {
 
     .header p {
         font-size: 1.8em;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }
 
@@ -78,6 +80,8 @@ body {
 
     .header p {
         font-size: 1.8em;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }
 
@@ -98,12 +102,12 @@ body {
 }
 
 .countdown p {
-    font-size: 1em;
+    font-size: 1.4em;
     color: #777;
 }
 
 .details {
-    background: url('flower-2.jpg') no-repeat center center;
+    background: url('background-details.jpg') no-repeat center center;
     background-size: cover;
     padding: 50px 20px;
 }
@@ -114,7 +118,7 @@ body {
 }
 
 .details p {
-    font-size: 1.2em;
+    font-size: 1.8em;
     color: #777;
     margin: 20px 0;
 }
@@ -165,6 +169,12 @@ body {
     max-width: 800px;
 }
 
+.timeline-header {
+    text-align: left;
+    font-size: 2.3em;
+    font-weight: 600;
+}
+
 .timeline-item {
     display: flex;
     justify-content: space-between;
@@ -193,7 +203,7 @@ body {
 @media (max-width: 768px) {
     .schedule {
         padding: 50px 20px;
-        background: url('flower-4.jpg') no-repeat center center;
+        background: url('background-timelinejpg.jpg') repeat center center;
     }
 
     .timeline {
@@ -325,4 +335,8 @@ footer p {
 @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }
+}
+
+a {
+    color: black;
 }
